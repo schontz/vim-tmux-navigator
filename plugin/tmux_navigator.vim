@@ -125,7 +125,7 @@ function! s:TmuxAwareNavigate(direction)
       redraw!
     endif
     let s:tmux_is_last_pane = 1
-  else
+  elseif at_tab_page_edge
     " If neither VimNavigate nor Tmux navigate happened, fallback to buffer
     " switching
     if a:direction == 'h'
