@@ -128,9 +128,9 @@ function! s:TmuxAwareNavigate(direction)
   else
     " If neither VimNavigate nor Tmux navigate happened, fallback to buffer
     " switching
-    if direction == 'h'
+    if a:direction == 'h'
       execute ":bp"
-    elseif direction == 'l'
+    elseif a:direction == 'l'
       execute ":bn"
     endif
     let s:tmux_is_last_pane = 0
